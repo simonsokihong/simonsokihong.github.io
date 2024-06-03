@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner {
+    background-color: #000;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 50px;
+    width: 100%;
+}
+
+.banner-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    font-family: 'Merriweather', serif;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #aaa;
+}
+
+.section {
+    display: none;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.body-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+.body-content {
+    flex: 1;
+    padding-right: 20px;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.picture-content {
+    flex-shrink: 0;
+}
+
+.picture-content img {
+    width: 360px; /* Set width to 360px */
+    height: 540px; /* Set height to 540px */
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.vitae-section {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 40px;
+    border-radius: 8px;
+}
+
+.vitae-section h3 {
+    font-family: 'Merriweather', serif;
+    margin-top: 40px;
+}
+
+.vitae-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.vitae-section li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.research-section {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 8px;
+}
+
+.research-section h3 {
+    font-family: 'Merriweather', serif;
+    margin-top: 40px;
+    font-size: 1.4em;
+}
+
+.research-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.research-section ul.research-list li {
+    margin-bottom: 40px; /* Add space between the papers */
+}
+
+.paper-button {
+    font-size: 1em;
+    color: #007BFF;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.paper-button:hover {
+    text-decoration: underline;
+}
+
+.abstract {
+    margin-top: 10px;
+    font-size: 1em; /* Match the font size with the title of the paper */
+    line-height: 1.4;
+    color: #333; /* Change color to match the paper title */
+}
