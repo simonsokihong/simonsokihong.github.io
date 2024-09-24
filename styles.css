@@ -6,6 +6,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .banner {
@@ -17,6 +19,7 @@ body {
     position: relative;
     height: 50px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .banner-content {
@@ -25,6 +28,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -61,6 +65,7 @@ body {
     width: 100%;
     max-width: 1200px;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .body-wrapper {
@@ -71,6 +76,7 @@ body {
     width: 100%;
     max-width: 1200px;
     margin-top: 20px;
+    box-sizing: border-box;
 }
 
 .body-content {
@@ -107,6 +113,7 @@ a:hover {
     background-color: #fff;
     margin-top: 40px;
     border-radius: 8px;
+    box-sizing: border-box;
 }
 
 .vitae-section h3 {
@@ -130,6 +137,7 @@ a:hover {
     padding: 20px;
     margin-top: 40px;
     border-radius: 8px;
+    box-sizing: border-box;
 }
 
 .research-section h3 {
@@ -163,4 +171,56 @@ a:hover {
     font-size: 1em; /* Match the font size with the title of the paper */
     line-height: 1.4;
     color: #333; /* Change color to match the paper title */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .banner-content, .body-wrapper, .vitae-section, .research-section {
+        padding: 10px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .body-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .body-content {
+        padding-right: 0;
+        font-size: 1em;
+    }
+
+    .picture-content img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: auto;
+        padding: 10px;
+    }
+
+    .banner-content {
+        flex-direction: column;
+    }
+
+    .menu ul {
+        padding: 0;
+        text-align: center;
+    }
+
+    .menu a {
+        font-size: 1em;
+    }
 }
