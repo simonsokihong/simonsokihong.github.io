@@ -6,13 +6,24 @@
     <title>Simon Seokki Hong - Homepage</title>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script>
         function showSection(sectionId) {
             var sections = document.querySelectorAll('.section');
             sections.forEach(function(section) {
                 section.style.display = 'none';
+                section.classList.remove('fade-in');
             });
-            document.getElementById(sectionId).style.display = 'block';
+            var el = document.getElementById(sectionId);
+            el.style.display = 'block';
+            void el.offsetWidth;
+            el.classList.add('fade-in');
+
+            document.querySelectorAll('.menu a').forEach(function(a) {
+                a.classList.remove('active');
+            });
+            var activeLink = document.querySelector('.menu a[data-section="' + sectionId + '"]');
+            if (activeLink) activeLink.classList.add('active');
         }
         function toggleAbstract(abstractId) {
             var abstract = document.getElementById(abstractId);
@@ -23,7 +34,7 @@
             }
         }
         document.addEventListener('DOMContentLoaded', function() {
-            showSection('home'); // Show home section by default
+            showSection('home');
         });
     </script>
 </head>
@@ -33,9 +44,9 @@
             <div class="logo">Simon Seokki Hong</div>
             <nav class="menu">
                 <ul>
-                    <li><a href="#home" onclick="showSection('home')">Home</a></li>
-                    <li><a href="#research" onclick="showSection('research')">Research</a></li>
-                    <li><a href="#vitae" onclick="showSection('vitae')">Vitae</a></li>
+                    <li><a href="#home" data-section="home" onclick="showSection('home')">Home</a></li>
+                    <li><a href="#research" data-section="research" onclick="showSection('research')">Research</a></li>
+                    <li><a href="#vitae" data-section="vitae" onclick="showSection('vitae')">Vitae</a></li>
                 </ul>
             </nav>
         </div>
@@ -43,16 +54,19 @@
     <div id="home" class="section">
         <div class="body-wrapper">
             <div class="body-content">
-                <p><strong>Welcome to my website!</strong></p>
                 <p>I am a research economist at the Bank of England.</p>
-                <p>Research fields: empirical macroeconomics and forecasting. </p>
-                <p></p>Specifically, I am interested in the identification of macroeconomic shocks and empirical techniques to inform policy and forecast the economy.</p>
-                <p>CV: <a href="SimonSeokki_Hong_CV_2023_ver1.pdf" target="_blank">here</a></p>
+                <p>My research focuses on empirical macroeconomics and forecasting — specifically, the identification of macroeconomic shocks and empirical techniques to inform policy and forecast the economy.</p>
+                <a href="SimonSeokki_Hong_CV_2023_ver1.pdf" target="_blank" class="cv-button"><i class="fa-solid fa-file-lines"></i> Download CV</a>
                 <p style="margin-top: 60px;"><strong>Contact</strong><br>
                     Simon Seokki Hong<br>
                     Bank of England<br>
                     Threadneedle street, London, United Kingdom<br>
-                    <a href="mailto:simon.hong@bankofengland.co.uk">simon.hong@bankofengland.co.uk</a>
+                    <span class="social-icons">
+                        <a href="mailto:simon.hong@bankofengland.co.uk" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/seokki-simon-hong" title="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/simonsokihong" title="GitHub" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.bankofengland.co.uk/" title="Bank of England" target="_blank"><i class="fa-solid fa-building-columns"></i></a>
+                    </span>
                 </p>
             </div>
             <div class="picture-content">
