@@ -106,8 +106,8 @@ body {
 }
 
 .picture-content img {
-    width: 180px; /* Set width to 180px */
-    height: 270px; /* Set height to 270px */
+    width: 420px; /* Keep the photo's original landscape ratio */
+    height: auto;
     border-radius: 8px;
     object-fit: cover;
 }
