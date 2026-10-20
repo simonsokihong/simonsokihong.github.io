@@ -106,8 +106,8 @@ body {
 }
 
 .picture-content img {
-    width: 360px; /* Set width to 360px */
-    height: 540px; /* Set height to 540px */
+    width: 180px; /* Set width to 180px */
+    height: 270px; /* Set height to 270px */
     border-radius: 8px;
     object-fit: cover;
 }
